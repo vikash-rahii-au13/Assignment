@@ -10,7 +10,7 @@ import {
 } from "typeorm";
 
 @Entity("job")
-export class Job {
+export class JobEntity {
 	@PrimaryColumn()
 	id: number;
 

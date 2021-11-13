@@ -2,10 +2,10 @@
 
 import { createConnection } from "typeorm";
 import dotenv from "dotenv";
-import { Job } from "../entities/job";
+import { JobEntity } from "../entities/job";
 
 dotenv.config();
-console.log(">>>>>", process.env.TYPE);
+// console.log(">>>>>", process.env.TYPE);
 const main = async () => {
 	try {
 		await createConnection({
@@ -15,7 +15,7 @@ const main = async () => {
 			username: "postgres",
 			password: "1234",
 			database: "crud",
-			entities: [Job],
+			entities: [JobEntity],
 			synchronize: true,
 		});
 		console.log("Connected to Postgres Database");
